@@ -34,6 +34,11 @@ int main()
 
   PID pid;
   // TODO: Initialize the pid variable.
+  // Intuition behind choosing these values
+  // I first choose the P value to get it running , it was showing a lot of osicalltions
+  // Then i started incrementing D value to make the trajectory go as smooth as possible, Around the value 8 it was the best but still sometimes it use to touch the Side roads
+  // AFter that i gave a small I value and it became very smooth
+   
   pid.Init(0.09, 0.001, 8.0);
 
 
