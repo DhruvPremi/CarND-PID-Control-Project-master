@@ -36,6 +36,6 @@ void PID::UpdateError(double cte)
 
 double PID::TotalError() 
 {
-
+	return ((-1 * Kp) * p_error) + ((-1 * Kd) * d_error) + ((-1 * Ki) * i_error);
 }
 

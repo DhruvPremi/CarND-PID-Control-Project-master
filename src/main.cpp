@@ -70,7 +70,7 @@ int main()
           std::cout << "Speed == " << speed;
 
           pid.UpdateError(cte);
-          steer_value = ((-1 * pid.Kp) * pid.p_error) + ((-1 * pid.Kd) * pid.d_error) + ((-1 * pid.Ki) * pid.i_error);  
+          steer_value = pid.TotalError();  
           if(steer_value > 1)
           {
           	steer_value = 1;
